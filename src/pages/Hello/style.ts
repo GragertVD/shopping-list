@@ -1,0 +1,23 @@
+import styled from 'styled-components';
+
+export const HelloPageContainer = styled.div`
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    li{
+      list-style-type: circle;
+    }
+  }
+`;
+
+
+

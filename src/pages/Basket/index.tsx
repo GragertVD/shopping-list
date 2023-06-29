@@ -16,8 +16,9 @@ const Basket: FC = () => {
       <h1 style={{ display: "none" }}>{'Список продуктов в корзине'}</h1>
       <BasketButtonContainer>
         <Button
-          onClick={() => {
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             dispatch({ type: BasketActionTypes.CLEARE_BASKET, payload: 'asd' });
+            event.currentTarget.blur();
             alert(`Вы купили проуктов на сумму ${state.price}`)
           }}
           text={`Купить всё на сумму ${state.price}`}
@@ -25,8 +26,9 @@ const Basket: FC = () => {
           disabled={state.productsArray.length === 0}
         />
         <Button
-          onClick={() => {
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             dispatch({ type: BasketActionTypes.CLEARE_BASKET, payload: 'asd' });
+            event.currentTarget.blur();
             alert('Корзина очищена')
           }}
           text='Очистить корзину'

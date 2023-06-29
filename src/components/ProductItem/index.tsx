@@ -28,9 +28,10 @@ const ProductItem: FC<IPropsProductItem> = ({ product }) => {
           product.inBasket
             ?
             <Button
-              onClick={() => {
+              onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                 dispatch({ type: ProductsActionTypes.REMOVE_PRODUCTS_IN_BASKET, payload: product.id });
                 dispatch({ type: BasketActionTypes.REMOVE_PRODUCT_BASKET, payload: product });
+                event.currentTarget.blur();
               }
               }
               colorBG='rebeccapurple'
@@ -38,9 +39,10 @@ const ProductItem: FC<IPropsProductItem> = ({ product }) => {
             />
             :
             <Button
-              onClick={() => {
+              onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                 dispatch({ type: ProductsActionTypes.ADD_PRODUCTS_IN_BASKET, payload: product.id });
                 dispatch({ type: BasketActionTypes.ADD_PRODUCT_BASKET, payload: product });
+                event.currentTarget.blur();
               }
               }
               colorBG='cornflowerblue' //rebeccapurple   cornflowerblue

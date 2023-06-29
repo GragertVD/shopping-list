@@ -3,7 +3,7 @@ import { StyledButton } from './style';
 
 
 interface IPropsButton {
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   colorBG?: string;
   color?: string;
   text: string;

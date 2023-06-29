@@ -18,7 +18,14 @@ const Catalog: FC = () => {
       <h1 style={{ display: "none" }}>{'Список продуктов'}</h1>
       <ProductList products={state.productsArray} />
       <ProductsButtonContainer>
-        <Button onClick={() => { setOpenCreateProduct(true) }} text='Создать новый товар' colorBG='rebeccapurple' />
+        <Button
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            setOpenCreateProduct(true)
+            event.currentTarget.blur();
+          }}
+          text='Создать новый товар'
+          colorBG='rebeccapurple'
+        />
       </ProductsButtonContainer>
       {
         openCreateProduct

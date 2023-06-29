@@ -11,12 +11,10 @@ const Error: FC = () => {
   }, []);
 
   return (
-    // <div>
-      <div>
-        <h1>Error: 404</h1>
-        <h2>Something is going wrong...</h2>
-      </div>
-    // </div>
+    <div>
+      <h1>Error: 404</h1>
+      <h2>Something is going wrong...</h2>
+    </div>
   )
 };
 

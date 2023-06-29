@@ -11,7 +11,6 @@ const Basket: FC = () => {
   const state = useTypedSelector(state => state.basket);
   const dispatch = useDispatch();
 
-
   return (
     <>
       <h1 style={{ display: "none" }}>{'Список продуктов в корзине'}</h1>

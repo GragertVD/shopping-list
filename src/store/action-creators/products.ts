@@ -24,8 +24,3 @@ export const fetchProducts = () => {
     // }, 1000);
   }
 }
-
-// export const useSetLanguage = () => {
-//   const dispatch = useDispatch();
-//   return (lang: Language) => dispatch({ type: TextActionTypes.SET_LANGUAGE, payload: lang });
-// }

@@ -8,7 +8,7 @@ interface IPropsProductList {
   products: Product[];
 }
 
-export const ProductList: FC<IPropsProductList> = ({products}) => {
+export const ProductList: FC<IPropsProductList> = ({ products }) => {
 
   return (
     <>

@@ -1,5 +1,4 @@
 import { ProductItemContainer } from './style';
-import styles from './style.module.scss';
 import { useInView } from 'react-intersection-observer';
 import { FC } from 'react';
 import { Product, ProductsActionTypes } from '../../types/products';

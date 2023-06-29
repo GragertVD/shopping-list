@@ -21,7 +21,7 @@ export const useOutsideClick = ({ element, setStateOutsideClick }: IuseOutsideCl
       if (!element.current)
         return
 
-        //document.getElementById("menu-")  --- чтобы не закрывалось при клике на список статуса
+      //document.getElementById("menu-")  --- чтобы не закрывалось при клике на список статуса
       if (!element.current.contains(target) && document.getElementById("menu-") === null) {
         setStateOutsideClick(false);
       }

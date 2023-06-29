@@ -12,7 +12,7 @@ export const basketReducer = (state: BasketState = initState, action: BasketActi
   switch (action.type) {
 
     case BasketActionTypes.ADD_PRODUCT_BASKET:
-      tempState.productsArray = [...tempState.productsArray, action.payload];
+      tempState.productsArray.push(action.payload);
       tempState.price += action.payload.price;
       return tempState;
 

@@ -17,6 +17,7 @@ export const productsReducer = (state: ProductsState = initState, action: Produc
 
     case ProductsActionTypes.FETCH_PRODUCTS_SUCCESS:
       //Закоментирована логика добавления полученных данных к уже существующим. Надо подумать что будет интереснее
+      //Подумал, если товаров много добавить подзагрузку частями при скролле, так бесполезно
 
       // tempState.productsArray = [...tempState.productsArray,
       // ...action.payload.map(
@@ -37,7 +38,7 @@ export const productsReducer = (state: ProductsState = initState, action: Produc
       return tempState;
 
     case ProductsActionTypes.ADD_PRODUCT:
-      action.payload.id = tempState.productsArray.length + 1; 
+      action.payload.id = tempState.productsArray.length + 1;
       tempState.productsArray.push(action.payload);
       return tempState;
 

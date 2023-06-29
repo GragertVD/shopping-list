@@ -1,21 +1,20 @@
 import { FC } from 'react';
 import { ProductListContainer } from './style';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
 import ProductItem from '../ProductItem';
+import { Product } from '../../types/products';
 
 
-export const ProductList: FC = () => {
+interface IPropsProductList {
+  products: Product[];
+}
 
-  const state = useTypedSelector(state => state.products);
-
-  if (state.loading) return (<h1>Loading process</h1>)
+export const ProductList: FC<IPropsProductList> = ({products}) => {
 
   return (
     <>
-      <h1 style={{ display: "none" }}>{'Список продуктов'}</h1>
       <ProductListContainer>
         {
-          state.productsArray.map((product) =>
+          products.map((product) =>
             <ProductItem key={product.id} product={product} />
           )
         }

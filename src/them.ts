@@ -4,12 +4,13 @@ export const lightTheme = {
 
   colors: {
     blue: "#55c5ff",
+    lavender: "#e6e6fa",
     lightBlue: "#67defd",
     darkBlue: "#2ea3f8",
     veryDarkBlue: "#0e95f7",
     black: "#000112",
     white: "#FFFFFF",
-    lightGrey: "#dfdfdf",
+    lightGrey: "#ededed",
     mediumGrey: "#828FA3",
     darkGrey: "#2B2C37",
     veryDarkGrey: "#252a2d",

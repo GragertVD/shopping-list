@@ -20,7 +20,7 @@ const Navbar: FC = () => {
         {navigation.map(({ id, title, path }) => (
           <li key={id}>
             <Link className={location.pathname === path ? "active" : ""} to={path}>
-              {title + (title === 'Корзина' ? ` (${state.price.toString()} ₽)` : '')}
+              {title + (title === 'Корзина' ? ` (${state.price.toString()} ₽)` : '')}
             </Link>
           </li>
         ))}

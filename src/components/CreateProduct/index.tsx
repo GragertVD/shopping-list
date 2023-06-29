@@ -58,9 +58,9 @@ export const CreateProduct: React.FC<ICreateProduct> = ({ setOpen }) => {
           </InputTitleContainer>
           <InputTitleContainer>
             <p>Ссыка на картинку (URL)</p>
-            <input {...inputURL} placeholder="https://i.dummyjson.com/data/asd.jpg" type="text" />
+            <input {...inputURL} placeholder="https://pngicon.ru/file/uploads/red_phone.png" type="text" />
           </InputTitleContainer>
-          <Button type="submit" width="100%" height="40px" text="Create Task" />
+          <Button type="submit" colorBG='cornflowerblue' width="100%" height="40px" text="Create Task" />
         </ContainerForm>
       </Background >
     </>

@@ -6,6 +6,7 @@ export enum ProductsActionTypes {
   ADD_PRODUCT = "ADD_PRODUCT",
   ADD_PRODUCTS_IN_BASKET = "ADD_PRODUCTS_IN_BASKET",
   REMOVE_PRODUCTS_IN_BASKET = "REMOVE_PRODUCTS_IN_BASKET",
+  CLEARE_BASKET = "CLEARE_BASKET",
 }
 
 interface FetchProductsAction {
@@ -37,9 +38,12 @@ interface RemoveInBasketProductsAction {
   payload: number;
 }
 
+interface CleareBasketProductsAction {
+  type: ProductsActionTypes.CLEARE_BASKET;
+}
 
 
-export type ProductsAction = FetchProductsAction | FetchSuccessProductsAction | FetchErrorProductsAction | AddInBasketProductsAction | RemoveInBasketProductsAction | AddProductsProductsAction;
+export type ProductsAction = FetchProductsAction | FetchSuccessProductsAction | FetchErrorProductsAction | AddInBasketProductsAction | RemoveInBasketProductsAction | AddProductsProductsAction | CleareBasketProductsAction;
 
 
 export interface ProductsState {

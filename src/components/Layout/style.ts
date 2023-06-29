@@ -9,7 +9,6 @@ export const LayoutContainer = styled.div`
   justify-content: space-between;
 
 
-  background-color: #55c5ff;
   background-color: ${props => props.theme.theme === "light" ? props.theme.colors.lightGrey : props.theme.colors.veryDarkGrey};
 `;
 

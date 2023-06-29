@@ -18,7 +18,7 @@ export const NavbarContainer = styled.nav`
 
     &.active,
     &:hover {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: ${props => props.theme.theme === "light" ? props.theme.colors.mediumGrey : props.theme.colors.veryDarkGrey};
     }
   }
 `;
@@ -29,6 +29,10 @@ export const LinksContainer = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  li{
+    height: 100%;
+  }
 
 `;
 

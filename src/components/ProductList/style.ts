@@ -8,6 +8,7 @@ export const ProductListContainer = styled.div`
   flex-flow: row wrap;
   gap: 24px;
   align-content: stretch;
+  justify-content: center;
   padding: 24px 8px;
   
   button{

@@ -34,6 +34,7 @@ const ProductItem: FC<IPropsProductItem> = ({ product }) => {
                 dispatch({ type: BasketActionTypes.REMOVE_PRODUCT_BASKET, payload: product });
               }
               }
+              colorBG='rebeccapurple'
               text='Убрать из корзины'
             />
             :
@@ -43,6 +44,7 @@ const ProductItem: FC<IPropsProductItem> = ({ product }) => {
                 dispatch({ type: BasketActionTypes.ADD_PRODUCT_BASKET, payload: product });
               }
               }
+              colorBG='cornflowerblue' //rebeccapurple   cornflowerblue
               text='В корзину'
             />
         }

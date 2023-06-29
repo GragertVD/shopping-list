@@ -38,7 +38,7 @@ export const productsReducer = (state: ProductsState = initState, action: Produc
 
     case ProductsActionTypes.ADD_PRODUCT:
       action.payload.id = tempState.productsArray.length + 1; 
-      tempState.productsArray = [...tempState.productsArray, action.payload];
+      tempState.productsArray.push(action.payload);
       return tempState;
 
     case ProductsActionTypes.ADD_PRODUCTS_IN_BASKET:
@@ -55,6 +55,13 @@ export const productsReducer = (state: ProductsState = initState, action: Produc
         if (el.id === action.payload) {
           el.inBasket = false;
         }
+        return el;
+      });
+      return tempState;
+
+    case ProductsActionTypes.CLEARE_BASKET:
+      tempState.productsArray = tempState.productsArray.map((el) => {
+        el.inBasket = false;
         return el;
       });
       return tempState;

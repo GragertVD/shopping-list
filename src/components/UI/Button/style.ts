@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button<{ colorBG?: string, color?: string, height: string, width: string | undefined }>`
-  cursor: pointer;
+  &:not(&:disabled){
+    cursor: pointer;
+  }
   color:${props => props.color || 'white'};
   background: ${props => props.colorBG || 'grey'};
   padding: 15px 25px;
@@ -10,23 +12,21 @@ export const StyledButton = styled.button<{ colorBG?: string, color?: string, he
   border: none;
   border-radius: 24px;
   transition: all 0.12s;
-  &:focus{
-    /* outline: none; */
-    /* border: 1px solid ${props => props.color !== props.theme.colors.mainPurple? "black": props.theme.colors.mainPurple}; */
+  &:focus:not(&:disabled){
+    outline: none;
+    border: 3px solid ${props => props.color ? props.color : props.theme.colors.gren};
+    transform: scale(1.02);
   }
 
   &:disabled{
-    background: red;  
+    background: grey;  
   }
 
   @media (any-hover: hover) {
-    &:hover{
+    &:hover:not(&:disabled){
       background: ${props => props.colorBG || props.theme.colors.mainPurpleHover};
-      filter: grayscale(${props => props.colorBG? "1" : "0"});
+      filter: grayscale(${props => props.colorBG ? "1" : "0"});
     }
   }
 
-  ${props => props.theme.beforeMobileM}{
-    padding: 14px 18px;
-  }
 `

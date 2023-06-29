@@ -7,13 +7,10 @@ import { FC } from 'react';
 const Layout: FC = () => {
   return (
     <LayoutContainer>
-
       <Header />
-
-      {/* <main className="container"> */}
-      <Outlet />
-      {/* </main> */}
-
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </LayoutContainer>
   )

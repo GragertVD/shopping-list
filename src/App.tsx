@@ -5,15 +5,15 @@ import {
   Route,
 } from 'react-router-dom';
 
-import { lightTheme } from '../them';
-import { Layout } from "../components/Layout";
-import Error from "../pages/404";
+import { lightTheme } from './them';
+import { Layout } from "./components/Layout";
+import Error from "./pages/404";
 import { FC, useEffect } from "react";
-import Catalog from "../pages/Catalog";
-import Hello from "../pages/Hello";
-import Basket from "../pages/Basket";
+import Catalog from "./pages/Catalog";
+import Hello from "./pages/Hello";
+import Basket from "./pages/Basket";
 import { useDispatch } from "react-redux";
-import { fetchProducts } from "../store/action-creators/products";
+import { fetchProducts } from "./store/action-creators/products";
 
 const App: FC = () => {
 

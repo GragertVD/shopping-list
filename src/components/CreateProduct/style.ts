@@ -17,6 +17,8 @@ export const ContainerForm = styled.form`
   ${props => props.theme.beforeMobileL}{
     padding: 18px;
   }
+
+  overflow-y: auto;
 `;
 
 export const TitleNewProduct = styled.h3`

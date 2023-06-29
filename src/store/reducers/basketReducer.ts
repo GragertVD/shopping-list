@@ -22,12 +22,16 @@ export const basketReducer = (state: BasketState = initState, action: BasketActi
       return tempState;
 
     case BasketActionTypes.CLEARE_BASKET:
-      tempState = initState;
-      return tempState;
+      return {
+        productsArray: [],
+        price: 0,
+      };
 
     case BasketActionTypes.PAY_BASKET:
-      tempState = initState;
-      return tempState;
+      return {
+        productsArray: [],
+        price: 0,
+      };
 
     default:
       return state;

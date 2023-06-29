@@ -11,13 +11,16 @@ const Basket: FC = () => {
   const state = useTypedSelector(state => state.basket);
   const dispatch = useDispatch();
 
+  console.log(state);
+  
+
   return (
     <>
       <h1 style={{ display: "none" }}>{'Список продуктов в корзине'}</h1>
       <BasketButtonContainer>
         <Button
           onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-            dispatch({ type: BasketActionTypes.CLEARE_BASKET, payload: 'asd' });
+            dispatch({ type: BasketActionTypes.CLEARE_BASKET});
             event.currentTarget.blur();
             alert(`Вы купили проуктов на сумму ${state.price}`)
           }}
@@ -27,7 +30,7 @@ const Basket: FC = () => {
         />
         <Button
           onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-            dispatch({ type: BasketActionTypes.CLEARE_BASKET, payload: 'asd' });
+            dispatch({ type: BasketActionTypes.CLEARE_BASKET});
             event.currentTarget.blur();
             alert('Корзина очищена')
           }}
